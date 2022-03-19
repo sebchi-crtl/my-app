@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Cursor from './components/CustomCursor/index';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Cursor />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

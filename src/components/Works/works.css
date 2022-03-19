@@ -1,0 +1,22 @@
+
+
+.work_main{
+    width: 100vw;
+    padding-right: 5rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg1{
+    background-color: antiquewhite;
+}
+
+.bg3{
+    background-color: antiquewhite;
+}
+
+.bg5{
+    background-color: antiquewhite;
+}

@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500);
+@import url(https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=DM+Serif+Display&family=Gwendolyn:wght@700&family=Roboto+Mono:ital@1&family=Roboto:wght@900&display=swap);
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in;
+  /* font-family: 'Baloo Bhaijaan 2', cursive; */
+  font-family: 'DM Serif Display', serif;
+  cursor: none;
+  color: #ebed75 ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #a52a2a;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::selection {
+  background: #2c2c2c;
+}
+::-moz-selection {
+  background: #2c2c2c;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+ul{
+  text-decoration: none;
+  list-style: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.head{
+  margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* .mynav{
+  display: contents;
+  position: sticky;
+} */
+
+.hr{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.menu {
+  margin-left: 9rem;
+}
+.portfolio .dropdown{
+  left: 33rem;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px){
+  /* *{
+    max-width: 100%;
+  } */
+
+  body{
+    margin-left: 0;
+    margin-right: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .hr{
+    display: block;
   }
+
+  .head{
+    margin: 0;
+    padding: 0;
+  }
+  .head .lang{
+    display: none;
+  }
+  .portfolio{
+    display: none;
+  }
+  .menu{
+    width: 100%;
+    margin-left: 0;
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+
+  li a{
+    font-size: 22px;
+    font-weight: 300;
+  }
+ 
+  .nav{
+    display: block;
+  }
+
+
+}
+
+/* Banner */
+
+.i-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hi_icon{
+  width: 23%;
+}
+
+.title{
+  margin-top: 20px;
+  padding-top: 5rem;
+}
+
+.title h6,.i-title{
+  text-align: left;
+}
+
+.title h6{
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.title h2{
+  text-align: left;
+  font-family: 'DM Serif Display', serif;
+  text-transform: capitalize;
+  font-size: 38px;
+  letter-spacing: 3px;
+}
+
+.title h1{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-size: 60px;
+  background: none;
+  letter-spacing: 5px;
+  padding-bottom: 3rem;
+}
+
+.title h2{
+  font-size: 55px;
+  background: none;
+  letter-spacing: 5px;
+}
+
+.i-title{
+  height: 50px;
+  overflow: hidden;
+}
+
+.i-title-wrapper{
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  50%{
+    transform: translateY(-50px);
+  }
+  100%{
+    transform: translateY(-100px); 
+  }
+}
+
+.i-title-item{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-size: 30px;
+  height: 50px;
+  font-weight: bold;
+  color: #ebed75;
+  display: flex;
+  align-items: center;
+}
+
+.i-right{
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+.imag1{
+  position: absolute;
+  background: transparent;
+  
+}
+
+.banner{
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px){
+  .banner{
+    flex-direction: column;
+  }
+}
+
+
+@media only screen and (min-width: 768px){
+  .hi_icon{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .imag1{
+    display: none;
+  }
+  .banner{
+    flex-direction: column;
+  }
+}
+
+/* Banner my png */
+.i-bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.me{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* Offers Begin */
+.slider{
+  position: absolute;
+  left: 0;
+  width: 2800px;
+  height: 100%;
+}
+.slider-inner{
+  position: absolute;
+  top: 15%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.item{
+  position: relative;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  /* background-color: red; */
+}
+.img{
+  position: absolute;
+  left: -100px;
+  width: 500px;
+  height: 100%;
+  background-size: cover;
+  filter: grayscale(100%);
 }
